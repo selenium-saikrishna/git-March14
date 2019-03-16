@@ -1,0 +1,143 @@
+1 Open github.com
+2 Go to the repository that we uploaded
+3 Modify any file--->click on Commit changes
+4 Open gitbash on the localmachine
+5 git fetch
+6 The modified data will not be visible on the master branch
+  It will be placed on a remote branch
+7 Identify the name of the remote branch and check in into it
+  git branch -a
+  git checkout remotes/origin/master
+8 View the modified files and if the changes are accpetable merge with   master
+  git checkout master
+  git merge remotes/origin/master
+
+
+git pull
+=============
+1 Open github.com
+2 Go to the repository that we uploaded
+3 Modify any file--->click on Commit changes
+4 Open gitbash on the localmachine
+5 git pull
+  The modified files will  directly merge on the master branch and we can     see those changes
+
+
+https://onlywei.github.io/explain-git-with-d3/
+click on zen mode
+
+
+1 Create few commits on the master
+  touch f1
+  git add .
+  git commit -m "a"
+  touch f2
+  git add .
+  git commit -m "b"
+
+2 Create a new branch called test and create few commits
+  git checkout -b test
+  touch f3
+  git add .
+  git commit -m "c"
+  touch f4
+  git add .
+  git commit -m "d"
+
+3 Go back to master and create few more commits
+  git checkout master
+  touch f5
+  git add .
+  git commit -m "e"
+  touch f6
+  git add .
+  git commit -m "f"
+
+4 Rebase test with master
+  git checkout test
+  git rebase master
+  git checkout master
+  git merge test
+
+5 Delete the test branch
+  git branch -d test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

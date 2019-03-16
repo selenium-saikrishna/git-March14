@@ -1,0 +1,238 @@
+
+
+
+Ansible
+--------------
+Ansible is an open source configuration management tool created using python
+Setup
+==========
+1 Create 4-5 Aws ubuntu-14 instances
+2 Name the 1st one as controller and the remaining as Server1 etc
+3 The main machine where ansible is installed is called as controler 
+  and the remote servers that we configure using ansible are called managed   nodes or managed hosts
+4 Ansible uses "agentless" policy to configure remote servers.ie we need not   install any ansible client s/w on the managed nodes.It only requires   passwordless ssh between the controller and the managed nodes
+5 Setup passwordless ssh between controller and managed nodes
+6 Open terminal in controlelr machine
+  Install ansible
+  a) Update the apt repository
+     sudo apt-get update
+  b) Install software-properties-common
+     sudo apt-get install -y software-properties-common
+  c) Add the latest version of ansible to the apt repository
+     sudo apt-add-repository ppa:ansible/ansible
+  d) Update the apt repository
+     sudo apt-get update
+  e) Install ansible
+     sudo apt-get install -y ansible
+
+7 Ansible stores all the remote managed node info in a file called
+  inventory file which is /etc/ansible/hosts.In this file we should enter the   ipaddress of all the managed nodes
+  sudo vim /etc/ansible/hosts
+  Enter ipaddress of managed nodes
+  Save and quit
+
+
+ansible can perform remote configuration of servers in the below 3 ways
+1 Adhoc commands
+2 Ansible playbooks
+3 Ansible roles
+
+Important modules in Ansible
+--------------------------------
+1 command
+2 shell
+3 ping
+4 copy
+5 fetch
+6 file
+7 stat
+8 apt
+9 yum 
+10 user
+11 service
+12 uri
+13 debug
+14 replace
+15 pause
+16 git
+17 ec2
+18 docker_container
+19 docker_image
+20 docker_login
+21 include
+
+
+
+ansible all/groupname/ipaddress  -i path_of_inventory_file 
+                                            -m command     -a '    '
+
+
+Ansible command to see the memory info of all managed nodes
+ansible all -i /etc/ansible/hosts -m command -a 'free'
+
+Note: /etc/ansible/hosts is the default inventory file and it is not necessary to give -i option when we use this default inventory file
+
+ansible all  -m command -a 'free'
+
+Note: command module is the deafult module in ansible and its not necessary to give -m when using this modules
+
+ansible all  -a 'free'
+
+==============================================
+ansible command to execute ps -aux and store the output into file1 on the managed nodes
+ansible all -m shell -a 'ps -aux > file1'
+
+Ansible command to install docker on all the managed nodes
+ansible all -m shell -a 'curl -fsSL https://get.docker.com -o get-docker.sh'
+ansible all -m shell -a 'sh get-docker.sh'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+ 

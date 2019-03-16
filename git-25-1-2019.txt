@@ -1,0 +1,87 @@
+1 To initilise the working dir as a git repo
+  git init
+  This will create a hidden folder called .git which contains all the
+  configurations necessary for git to run
+
+2 To send a file from working dir to stagging area
+  git add filename
+  To send multiple files into stagging area
+  git add file1 file2 file3
+  To send all files and folders into stagging area
+  git add   .
+  Note   . represents present working directory in linux
+
+3 To remove a file from stagging area and bring them back to working dir
+  git rm --cached filename
+  (or)
+  git reset filename
+
+4 To move files from stagging area to Local repository
+  git commit -m "Some Message"
+
+5 To see the status of files in stagging area and working dir
+  git status
+
+6 To see the list of commits in the local repository
+  git log
+  To see the commit history in oneline format
+  git log --oneline
+
+
+Note: After installing git set username and email id globally
+     git config --gloabl user.name "sai krishna"
+     git config --global user.email "sai@gmail.com"
+     To see the list of global configurations
+     git config --global --list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
